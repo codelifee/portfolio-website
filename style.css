@@ -50,7 +50,7 @@ body {
 }
 
 .page {
-  min-height: 90vh;
+  min-height: 100vh;
   display: grid;
   grid-template-columns: 5% 1fr 1fr 1fr 5%;
 }
@@ -100,45 +100,38 @@ body {
   padding: 20px 0px;
 }
 
-.pages {
-  position: absolute;
-  right: 5%;
-  top: 50%;
-  transform: translateY(-25%);
+.about {
+  height: 100vh;
 }
 
-.pages > div {
+.title {
+  width: 100vw;
+  height: 300px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  margin-top: 70px;
 }
 
-.pages h3 {
-  font-size: 24px;
-  padding: 30px;
+.title h1 {
+  width: 190px;
+  font-size: 60px;
+  border-bottom: 10px solid aliceblue;
 }
 
-.pages svg {
-  cursor: pointer;
-  opacity: 0.5;
-  transform: scale(2);
+.skills {
+  /* margin-left: 300px; */
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 300px);
+  row-gap: 20px;
 }
 
-.pages svg:hover {
-  animation: dot 0.5s ease-in-out infinite alternate;
-}
-
-.pages svg.active {
-  opacity: 1;
-}
-
-@keyframes dot {
-  0% {
-    transform: scale(2);
-  }
-  100% {
-    transform: scale(4);
-  }
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .banner {
@@ -218,9 +211,18 @@ body {
     align-items: center;
   }
 
+  .navbar__list {
+    display: none;
+  }
+
+  .navbar__hamburger {
+    display: block;
+  }
+
   .hero {
     grid-column: 2/3;
     height: auto;
+    margin-top: 200px;
   }
 
   .hero img {
@@ -278,6 +280,21 @@ body {
   }
   .details h2 {
     font-size: 28px;
+  }
+}
+
+@media (max-width: 620px) {
+  .details {
+    margin-bottom: 200px;
+  }
+
+  .hero {
+    margin-top: 200px;
+  }
+
+  .skills {
+    grid-template-columns: 200px 200px;
+    grid-template-rows: 100px 100px 100px;
   }
 }
 
