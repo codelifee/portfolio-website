@@ -111,8 +111,12 @@ a {
 .pages {
   position: absolute;
   right: 5%;
-  top: 50%;
+  top: 93%;
   transform: translateY(-25%);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 300px;
 }
 
 .pages > div {
@@ -124,6 +128,11 @@ a {
 .pages h3 {
   font-size: 24px;
   padding: 30px;
+}
+
+.pages a {
+  display: flex;
+  align-items: center;
 }
 
 .pages svg {
@@ -201,6 +210,19 @@ a {
   padding-bottom: 30px;
 }
 
+.story-description .skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 220px);
+  justify-content: center;
+  row-gap: 50px;
+}
+
+.story-description div,
+.work-description div {
+  padding: 20px 0px;
+  font-size: 20px;
+}
+
 .story-description p,
 .work-description p {
   padding: 20px 0px;
@@ -220,11 +242,18 @@ a {
 }
 
 .container {
-  margin-left: 37%;
+  /* margin-left: 37%;
   margin-top: 50px;
   padding: 20px;
-  width: 600px;
-  border: 2px solid black;
+  width: 600px; */
+  /* border: 2px solid black; */
+  
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
 }
 
 textarea {
@@ -365,6 +394,15 @@ textarea {
   .skills {
     grid-template-columns: 200px 200px;
     grid-template-rows: 100px 100px 100px;
+  }
+}
+
+@media (max-width: 510px) {
+  .story-description .skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 }
 
