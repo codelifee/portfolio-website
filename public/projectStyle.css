@@ -18,7 +18,9 @@
 
 body {
   font-family: PopLight;
-  /* overflow-x: hidden; */
+  overflow-x: scroll;
+  background: radial-gradient(rgba(43, 55, 96, 1), rgba(11, 16, 35, 1));
+  color: #fff;
 }
 
 a {
@@ -31,7 +33,7 @@ a {
   justify-content: space-between;
   padding: 20px 50px;
   position: fixed;
-  width: 100vw;
+  width: 100%;
   font-size: 23px;
   z-index: 100;
   color: white;
@@ -86,42 +88,38 @@ a {
   padding-bottom: 30px;
 }
 
-.work-description div {
-  padding: 20px 0px;
-  font-size: 20px;
-}
-
 .work-description p {
   padding: 20px 0px;
   font-size: 20px;
 }
 
 .work-gallery {
-  display: grid;
-  grid-template-columns: repeat(1, 1200px);
-  height: 100%;
-  padding-left: 100px;
-  padding-top: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-left: 12%;
+  padding-top: 4%;
+}
+
+.photo-gallery {
+  width: 80%;
 }
 
 .work-gallery img {
-  width: 100%;
+  width: 80%;
+}
+
+.work-gallery .photo-gallery {
   margin-bottom: 20px;
 }
 
-.container {
-  /* margin-left: 37%;
-  margin-top: 50px;
-  padding: 20px;
-  width: 600px; */
-  /* border: 2px solid black; */
-  
-
+.photo-gallery .photo-overlay {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 100px;
+  width: 80%;
 }
 
 @media (max-width: 1024px) {
@@ -134,21 +132,10 @@ a {
     display: block;
   }
 
-  .story,
-  .my-work {
-    flex-direction: column;
-  }
-
-  .story-description,
-  .work-description {
-    width: 100%;
-  }
-
   .work-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    transform: translateX(-5px);
-    padding-left: 0;
+    grid-template-columns: repeat(1, minmax(400px, 1fr));
+    padding-left: 30%;
     padding-top: 0;
   }
 
@@ -159,12 +146,6 @@ a {
 }
 
 @media (max-width: 768px) {
-  .page {
-    grid-template-rows: 1fr 1fr;
-  }
-  .hero img {
-    height: 300px;
-  }
   .details h1 {
     font-size: 38px;
   }
@@ -181,32 +162,24 @@ a {
   .hero {
     margin-top: 200px;
   }
-
-  .skills {
-    grid-template-columns: 200px 200px;
-    grid-template-rows: 100px 100px 100px;
-  }
 }
 
-@media (max-width: 510px) {
-  .story-description .skills {
+@media (max-width: 424px) {
+  .work-gallery {
+    margin: 5% 0 0 10%;
+    padding: 0;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+  }
+
+  .navbar {
+    width: 100%;
+  }
+
+  .work-description {
+    padding: 0;
   }
 }
 
-@media (max-width: 400px) {
-  .banner {
-    transform: translateX(10px);
-  }
 
-  .story img {
-    transform: translateX(-20px);
-  }
-
-  .work-gallery img {
-    transform: translateX(15px);
-  }
-}
