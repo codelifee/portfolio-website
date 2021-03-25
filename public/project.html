@@ -8,16 +8,15 @@
     <title>SuminJung</title>
 </head>
 <body>
-    <main>
         <nav class="navbar">
-            <h3 class="navbar__logo">Portfolio</h3>
+            <h3 class="navbar__logo"><a href="index.html">Portfolio</a></h3>
             <ul class="navbar__list">
                 <li><a href="/index.html">Home</a></li>
                 <li><a href="/about.html">About</a></li>
                 <li><a href="/project.html">Project</a></li>
                 <li><a href="/contact.html">Contact</a></li>
             </ul>
-            <img class="navbar__hamburger" src="./img/hamburger.svg" alt="burger" />
+            <div class="navbar__hamburger"><svg class="new-shape" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z"/></svg></div>
         </nav>
         <div class="banner">
             <img src="./img/banner.jpg" alt="">
@@ -42,17 +41,13 @@
                             <a target="_blank" href="http://3.34.25.23/blog/%ec%87%bc%ed%95%91%eb%aa%b0-%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8/">
                                 <i class="fas fa-blog">Blog</i>
                             </a>
-                            <a target="_blank" href="www.naver.com">
+                            <a target="_blank" href="https://github.com/codelifee/shopping-mall-front-restore">
                                 <i class="fab fa-github">Frontend</i>
                             </a>
-                            <a target="_blank" href="www.naver.com">
+                            <a target="_blank" href="https://github.com/codelifee/shopping-mall-backend">
                                 <i class="fab fa-github">Backend</i>
                             </a>
                         </div>
-                        <p>
-                            (클라이언트가 도메인 명을 한글로 원해서 한글로 진행했는데 aws certificate manager 등록 와중에 인식이 안되는 문제 발생
-                            따라서 현재 사이트에는 백엔드가 연결이 되어있지 않습니다. Blog에 youtube영상을 참고바랍니다.)
-                        </p>
                     </div>
                 </div>
                 <div class="photo-gallery">
@@ -60,13 +55,13 @@
                     <div class="photo-overlay">
                         <div class="photo-title">건설업체 홈페이지</div>
                         <div class="image-info">
-                            <a target="_blank" href="www.naver.com">
+                            <a target="_blank" href="https://construction-site-fffb1.firebaseapp.com/">
                                 <i class="fas fa-home">Website</i>
                             </a>
-                            <a target="_blank" href="www.naver.com">
+                            <a target="_blank" href="http://3.34.25.23/blog/construction-company-website-project/">
                                 <i class="fas fa-blog">Blog</i>
                             </a>
-                            <a target="_blank" href="www.naver.com">
+                            <a target="_blank" href="https://github.com/codelifee/construction-website">
                                 <i class="fab fa-github">Github</i>
                             </a>
                         </div>
@@ -77,13 +72,13 @@
                     <div class="photo-overlay">
                         <div class="photo-title">기도원 사이트</div>
                         <div class="image-info">
-                            <a target="_blank" href="www.naver.com">
+                            <a target="_blank" href="https://pension-site-6e32c.firebaseapp.com/">
                                 <i class="fas fa-home">Website</i>
                             </a>
-                            <a target="_blank" href="www.naver.com">
+                            <a target="_blank" href="http://3.34.25.23/blog/pension-website-project/">
                                 <i class="fas fa-blog">Blog</i>
                             </a>
-                            <a target="_blank" href="www.naver.com">
+                            <a target="_blank" href="https://github.com/codelifee/PensionSite">
                                 <i class="fab fa-github">Github</i>
                             </a>
                         </div>
@@ -91,6 +86,15 @@
                 </div>
             </div>
         </div>
-    </main>
+        <div class="dropdown">
+            <div class="dropdown__hamburger"><i class="fas fa-times fa-2x"></i></div>
+            <ul class="dropdown__list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="project.html">Project</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
 </body>
+<script src="app.js"></script>
 </html>

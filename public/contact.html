@@ -9,14 +9,14 @@
 <body>
     <main>
         <nav class="navbar">
-            <h3 class="navbar__logo">Portfolio</h3>
+            <h3 class="navbar__logo"><a href="index.html">Portfolio</a></h3>
             <ul class="navbar__list">
                 <li><a href="/index.html">Home</a></li>
                 <li><a href="/about.html">About</a></li>
                 <li><a href="/project.html">Project</a></li>
                 <li><a href="/contact.html">Contact</a></li>
             </ul>
-            <img class="navbar__hamburger" src="./img/hamburger.svg" alt="burger" />
+            <div class="navbar__hamburger"><svg class="new-shape" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z"/></svg></div>
         </nav>
         <div class="banner">
             <img src="./img/banner.jpg" alt="">
@@ -56,6 +56,16 @@
                 </div>
             </div>
           </div>
+          <div class="dropdown">
+            <div class="dropdown__hamburger"><i class="fas fa-times fa-2x"></i></div>
+            <ul class="dropdown__list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="project.html">Project</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
     </main>
 </body>
+<script src="app.js"></script>
 </html>

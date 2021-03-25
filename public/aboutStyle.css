@@ -1,10 +1,18 @@
 *,
 *::before,
-*::after,
-body {
+*::after{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  overflow-y: hidden;
+  height: 100vh;
 }
 
 @font-face {
@@ -15,10 +23,6 @@ body {
 @font-face {
   font-family: PopLight;
   src: url('./fonts/Poppins-Light.ttf');
-}
-
-body {
-  font-family: PopLight;
 }
 
 a {
@@ -33,7 +37,7 @@ a {
   position: fixed;
   width: 100vw;
   font-size: 23px;
-  z-index: 100;
+  z-index: 3;
   color: white;
 }
 
@@ -92,6 +96,7 @@ a {
   margin: auto;
   padding: 80px 0px;
   margin-top: 20px;
+  height: 78%;
 }
 
 .story-description {
@@ -109,6 +114,7 @@ a {
   justify-content: center;
   row-gap: 50px;
   margin-top: 20px;
+  height: 20%;
 }
 
 .story-description div {
@@ -126,14 +132,40 @@ a {
     height: 400px;
 }
 
-@media (max-width: 1024px) {
-  .navbar__list {
-    display: none;
-  }
+.dropdown {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  background: black;
+  color: white;
+  transform: translateX(100%);
+  transition: all 0.2s ease-in;
+}
 
-  .navbar__hamburger {
-    display: block;
-  }
+.dropdown__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  list-style: none;
+  margin-top: 200px;
+  font-size: 25px;
+}
+
+.dropdown__hamburger {
+  position: absolute;
+  margin-left: 87%;
+  margin-top: 20px;
+}
+
+.new-shape {
+  fill: white;
+}
+
+@media (max-width: 1024px) {
 
   .story {
     flex-direction: column;
@@ -147,11 +179,19 @@ a {
     padding-top: 30px;
     text-align: center;
   }
+
+  .profile {
+    display: none;
+  }
 }
 
 @media (max-width: 768px) {
-  .navbar {
-      padding: 10px;
+  .navbar__list {
+    display: none;
+  }
+
+  .navbar__hamburger {
+    display: block;
   }
 
   .page {
@@ -166,6 +206,10 @@ a {
   .details h2 {
     font-size: 28px;
   }
+
+  .profile {
+    display: none;
+  }
 }
 
 @media (max-width: 620px) {
@@ -179,31 +223,6 @@ a {
 
   .skills {
     grid-template-columns: 200px 200px;
-    grid-template-rows: 100px 100px 100px;
+    margin-left: 70px;
   }
-}
-
-@media (max-width: 510px) {
-  .story-description .skills {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .profile img {
-    display: none;
-  }
-}
-
-@media (max-width: 400px) {
-
-  .story img {
-    transform: translateX(-20px);
-  }
-
-  .work-gallery img {
-    transform: translateX(15px);
-  }
-
 }

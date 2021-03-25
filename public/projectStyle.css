@@ -18,9 +18,10 @@
 
 body {
   font-family: PopLight;
-  overflow-x: scroll;
   background: radial-gradient(rgba(43, 55, 96, 1), rgba(11, 16, 35, 1));
   color: #fff;
+  height: 100vh;
+  overflow-x: scroll;
 }
 
 a {
@@ -35,7 +36,7 @@ a {
   position: fixed;
   width: 100%;
   font-size: 23px;
-  z-index: 100;
+  z-index: 2;
   color: white;
 }
 
@@ -95,23 +96,18 @@ a {
 
 .work-gallery {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding-left: 12%;
   padding-top: 4%;
-}
-
-.photo-gallery {
-  width: 80%;
+  height: 70%;
+  width: 70%;
+  overflow-x: scroll;
+  gap: 30px;
 }
 
 .work-gallery img {
-  width: 80%;
-}
-
-.work-gallery .photo-gallery {
-  margin-bottom: 20px;
+  width: 500px;
 }
 
 .photo-gallery .photo-overlay {
@@ -119,10 +115,43 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 80%;
+  width: 100%;
 }
 
-@media (max-width: 1024px) {
+.dropdown {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  transform: translateX(100%);
+  z-index: 3;
+  background: black;
+  color: white;
+  transition: all 0.2s ease-in;
+  top: 0;
+}
+
+.dropdown__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  list-style: none;
+  margin-top: 150px;
+  font-size: 25px;
+}
+
+.dropdown__hamburger {
+  position: absolute;
+  margin-left: 87%;
+  margin-top: 20px;
+}
+
+.new-shape {
+  fill: white;
+}
+
+@media (max-width: 1200px) {
 
   .navbar__list {
     display: none;
@@ -135,13 +164,15 @@ a {
   .work-gallery {
     display: grid;
     grid-template-columns: repeat(1, minmax(400px, 1fr));
-    padding-left: 30%;
-    padding-top: 0;
   }
 
   .profile {
     padding-top: 30px;
     text-align: center;
+  }
+
+  .photo-overlay {
+  
   }
 }
 
@@ -164,22 +195,6 @@ a {
   }
 }
 
-@media (max-width: 424px) {
-  .work-gallery {
-    margin: 5% 0 0 10%;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
 
-  .navbar {
-    width: 100%;
-  }
-
-  .work-description {
-    padding: 0;
-  }
-}
 
 
