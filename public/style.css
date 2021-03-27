@@ -16,10 +16,6 @@
   src: url('./fonts/Poppins-Light.ttf');
 }
 
-html {
-  height: 100vh;
-}
-
 body {
   font-family: PopLight;
   overflow-x: hidden;
